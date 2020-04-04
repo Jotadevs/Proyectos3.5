@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float health = 1;
+    public float shield = 3;
+    bool shield_On = false;
+    public float powerUps = 0;
+
     void Start()
     {
         
@@ -15,4 +19,5 @@ public class BulletScript : MonoBehaviour
     {
         
     }
+    
 }
