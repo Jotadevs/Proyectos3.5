@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6442485222026135816}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,8 @@ MonoBehaviour:
   player_Bullet: {fileID: 5052208731854110732, guid: a4d0affd256a1fa44878752cbd3d842b,
     type: 3}
   attack_Point: {fileID: 6206000916424154829}
+  playerstats: {fileID: 0}
+  attack_Timer: 0.35
 --- !u!1 &6509888640052693824
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,8 +158,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6509888640052693824}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.555, y: -0.0069999993, z: -4.9395084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.61, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6442485222026135819}

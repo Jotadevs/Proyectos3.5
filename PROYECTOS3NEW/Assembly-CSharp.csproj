@@ -58,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletScripts\BulletScript.cs" />
+    <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Usuario/Documents/RepositorioProyectos3/Proyectos3.5/PROYECTOS3NEW/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
