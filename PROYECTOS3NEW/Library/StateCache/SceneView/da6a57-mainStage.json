@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":82.22293853759766,"y":47.33819580078125,"z":17.271806716918947},"rotation":{"x":-0.05458815023303032,"y":0.9450622797012329,"z":-0.24062594771385194,"w":-0.21451890468597413},"size":23.134540557861329,"orthographic":false}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-2.6150946617126467,"y":1.6502554416656495,"z":-4.209874153137207},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":21.648677825927736,"orthographic":true}
+>>>>>>> Disparo
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":6.932470321655273,"y":-0.0892724096775055,"z":-112.40779113769531},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":19.532955169677736,"orthographic":true}
 >>>>>>> Disparo
