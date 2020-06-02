@@ -10,11 +10,8 @@ public class TurretShooting : MonoBehaviour
     public TurretDetection TR;
     public float fireRate;
     public float timeCounter;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float bulletSpeed;
+    
 
     // Update is called once per frame
     void Update()
@@ -30,7 +27,7 @@ public class TurretShooting : MonoBehaviour
     void Shoot()
     {
         Rigidbody clone = Instantiate(bullet, transform.position, Quaternion.identity);
-        clone.velocity = transform.TransformDirection(Vector3.forward * 6);
+        clone.velocity = transform.TransformDirection(Vector3.forward * bulletSpeed);
         Destroy(clone.gameObject, 5);
     }
 }
