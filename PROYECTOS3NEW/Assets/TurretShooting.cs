@@ -30,7 +30,7 @@ public class TurretShooting : MonoBehaviour
     void Shoot()
     {
         Rigidbody clone = Instantiate(bullet, transform.position, Quaternion.identity);
-        clone.velocity = transform.TransformDirection(Vector3.down * 2);
+        clone.velocity = transform.TransformDirection(Vector3.forward * 6);
         Destroy(clone.gameObject, 5);
     }
 }

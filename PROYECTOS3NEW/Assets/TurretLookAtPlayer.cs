@@ -5,7 +5,7 @@ using UnityEngine;
 public class TurretLookAtPlayer : MonoBehaviour
 {
     public Transform player;
-    public Transform originalRotation;
+    //public Transform originalRotation;
     public TurretDetection TR;
     // Start is called before the first frame update
     void Start()
@@ -18,9 +18,6 @@ public class TurretLookAtPlayer : MonoBehaviour
     {
         if(TR.detected)
         transform.LookAt(player, Vector3.up);
-        else
-        {
-            transform.LookAt(originalRotation);
-        }
+    
     }
 }
