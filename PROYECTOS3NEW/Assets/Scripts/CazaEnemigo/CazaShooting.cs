@@ -6,16 +6,20 @@ public class CazaShooting : MonoBehaviour
 {
     public Rigidbody bullet;
     public CazaDetection CD;
+    public PassAwayDetection PAD;
     public float fireRate;
     public float timeCounter;
     public float bulletSpeed;
-    
 
+    private void Start()
+    {
+        PAD = gameObject.GetComponentInParent<PassAwayDetection>();
+    }
     // Update is called once per frame
     void Update()
     {
         timeCounter += Time.deltaTime;
-        if (CD.shooting && timeCounter >= fireRate)
+        if (CD.shooting && timeCounter >= fireRate && PAD.canShoot)
         {
             timeCounter = 0;
             Shoot();
@@ -24,8 +28,7 @@ public class CazaShooting : MonoBehaviour
     void Shoot()
     {
         Rigidbody clone = Instantiate(bullet, transform.position, Quaternion.identity);
-        clone.velocity = transform.TransformDirection(Vector3.forward * bulletSpeed);
-        
+        clone.velocity = transform.TransformDirection(Vector3.forward * bulletSpeed);        
         Destroy(clone.gameObject, 5);
     }
 }

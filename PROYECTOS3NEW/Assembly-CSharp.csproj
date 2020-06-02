@@ -68,11 +68,14 @@
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaDetection.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaLookAtPlayer.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaShooting.cs" />
+    <Compile Include="Assets\Scripts\CazaEnemigo\PassAwayDetection.cs" />
     <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PowerUp.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\SuicidaEnemigo\SuicidaAttack.cs" />
+    <Compile Include="Assets\Scripts\SuicidaEnemigo\SuicidaDetection.cs" />
     <Compile Include="Assets\TurretDetection.cs" />
     <Compile Include="Assets\TurretLookAtPlayer.cs" />
     <Compile Include="Assets\TurretMoving.cs" />
