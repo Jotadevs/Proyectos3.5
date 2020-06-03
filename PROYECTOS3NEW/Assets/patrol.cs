@@ -14,6 +14,10 @@ public class patrol : MonoBehaviour
         WaitTime = startWaitTime;
         randomSpot = Random.Range(0, movePositions.Length);
     }
+    void OnTriggerEnter(Collider other)
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,4 +36,5 @@ public class patrol : MonoBehaviour
             }
         }
     }
+  
 }
