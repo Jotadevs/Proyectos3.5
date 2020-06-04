@@ -13,13 +13,13 @@ public class CazaShooting : MonoBehaviour
 
     private void Start()
     {
-        PAD = gameObject.GetComponentInParent<PassAwayDetection>();
+        
     }
     // Update is called once per frame
     void Update()
     {
         timeCounter += Time.deltaTime;
-        if (CD.shooting && timeCounter >= fireRate && PAD.canShoot)
+        if (CD.shoot && timeCounter >= fireRate && PAD.canShoot)
         {
             timeCounter = 0;
             Shoot();

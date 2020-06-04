@@ -6,21 +6,18 @@ public class patrol : MonoBehaviour
 {
     public float speed;
     public Transform[] movePositions;
+    public EnemyList lista;
     private int randomSpot;
     private float WaitTime;
     public float startWaitTime;
     void Start()
     {
+        lista = GameObject.FindObjectOfType<EnemyList>();
         WaitTime = startWaitTime;
         randomSpot = Random.Range(0, movePositions.Length);
+        lista.AddCazas(this.gameObject);
     }
-    void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "" || other.gameObject.tag == "")
-        {
-
-        }
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -39,5 +36,13 @@ public class patrol : MonoBehaviour
             }
         }
     }
-  
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "StartPatrol")
+        {
+            speed = 3;
+        }
+    }
+
 }

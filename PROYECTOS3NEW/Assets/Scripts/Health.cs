@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Health : MonoBehaviour
     public InstantiateController controller;
     public List<Vector3> checkpoints;
     public GameObject escenario;
+    private GameObject[] bullets;
     void Start()
     {
         vidaCanvas = GameObject.FindObjectOfType<Vidas>();
@@ -18,7 +20,7 @@ public class Health : MonoBehaviour
     {
         escenario = GameObject.FindObjectOfType<stagemove>().gameObject;
     }
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.tag == "Bullet")
         {
@@ -27,6 +29,15 @@ public class Health : MonoBehaviour
                 vidaCanvas.CambioVida(vida);
             SelectLastCheckpoint(checkpoints);
             controller.InstanceMyObjects();
+            if(vida == 0)
+            {
+                SceneManager.LoadScene("Gameover");
+            }
+            bullets = GameObject.FindGameObjectsWithTag("Bullet");
+            for (int i = 0; i < bullets.Length; i++)
+            {
+                Destroy(bullets[i]);
+            }
         }
         
     }

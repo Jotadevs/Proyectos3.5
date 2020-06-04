@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9213131239145069617}
   - component: {fileID: 2428438485465274308}
   - component: {fileID: 433285198424946738}
+  - component: {fileID: 7329272570006854333}
   m_Layer: 0
   m_Name: shootpoint
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2267733302341135417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7120881673300144419}
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: -5693740906904465328, guid: 40ad93bad340a8c4b818abd79c74b404, type: 3}
   CD: {fileID: 5649266680646202675}
-  PAD: {fileID: 0}
+  PAD: {fileID: 5457224973096663182}
   fireRate: 1
   timeCounter: 0
   bulletSpeed: 8
@@ -63,7 +64,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  player2: {fileID: 0}
   CD: {fileID: 5649266680646202675}
+--- !u!114 &7329272570006854333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267733302341135417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0765b28107c0247b8f29f995cb8fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: -5693740906904465328, guid: 40ad93bad340a8c4b818abd79c74b404, type: 3}
+  CD: {fileID: 5649266680646202675}
+  PAD: {fileID: 5457224973096663182}
+  fireRate: 1
+  timeCounter: 0
+  bulletSpeed: 7
 --- !u!1 &6005976664706319179
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +247,7 @@ GameObject:
   - component: {fileID: 3555099839024819973}
   - component: {fileID: 7790993461792326615}
   - component: {fileID: 8242050547486617810}
+  - component: {fileID: 2739775367663893102}
   m_Layer: 0
   m_Name: caza
   m_TagString: Enemy3
@@ -324,8 +345,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 30
   player: {fileID: 0}
-  shooting: 0
-  detected: 0
+  player2: {fileID: 0}
+  shoot: 0
+  shooting1: 0
+  detected1: 0
+  shooting2: 0
+  detected2: 0
 --- !u!114 &3555099839024819973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,10 +363,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3464ec542a9cf4d9784be454925a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 0
   movePositions:
   - {fileID: 0}
   - {fileID: 0}
+  lista: {fileID: 0}
   startWaitTime: 0
 --- !u!65 &7790993461792326615
 BoxCollider:
@@ -370,8 +396,26 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &2739775367663893102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8075734856836275100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0765b28107c0247b8f29f995cb8fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: -5693740906904465328, guid: 40ad93bad340a8c4b818abd79c74b404, type: 3}
+  CD: {fileID: 5649266680646202675}
+  PAD: {fileID: 5457224973096663182}
+  fireRate: 1
+  timeCounter: 0
+  bulletSpeed: 7
 --- !u!1 &8075764990024905352
 GameObject:
   m_ObjectHideFlags: 0

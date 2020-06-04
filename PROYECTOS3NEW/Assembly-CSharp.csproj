@@ -62,9 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AddEnemyToList.cs" />
     <Compile Include="Assets\BDD\BDDController.cs" />
     <Compile Include="Assets\BGScroll.cs" />
     <Compile Include="Assets\DestroyOnHit.cs" />
+    <Compile Include="Assets\EnemyList.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\AnimatedLight.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\CameraShake.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\DemoManager.cs" />
@@ -74,6 +76,9 @@
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\MouseFollow.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\OneshotParticleSystemsManager.cs" />
     <Compile Include="Assets\Mirza Beig\Particle Systems\_Common\Scripts\_Demo\ParticleManager.cs" />
+    <Compile Include="Assets\PatrolSuicida.cs" />
+    <Compile Include="Assets\SceneController.cs" />
+    <Compile Include="Assets\SceneControllerFinder.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaDetection.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaLookAtPlayer.cs" />
@@ -83,6 +88,7 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\InstantiateController\AddEnemy.cs" />
     <Compile Include="Assets\Scripts\InstantiateController\InstantiateController.cs" />
+    <Compile Include="Assets\Scripts\Player2.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\PowerUp.cs" />
@@ -91,6 +97,7 @@
     <Compile Include="Assets\Scripts\SuicidaEnemigo\SuicidaAttack.cs" />
     <Compile Include="Assets\Scripts\SuicidaEnemigo\SuicidaDetection.cs" />
     <Compile Include="Assets\Scripts\Vidas.cs" />
+    <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Compile Include="Assets\TurretDetection.cs" />
     <Compile Include="Assets\TurretLookAtPlayer.cs" />
     <Compile Include="Assets\TurretMoving.cs" />
