@@ -41,11 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         current_attack_Timer = attack_Timer;
         dashTime = startDashTime;
-
-
-
     }
-
 
     void Update()
     {
@@ -64,8 +60,7 @@ public class PlayerController : MonoBehaviour
     }
     void MovePlayer()
     {
-
-        if (Input.GetAxisRaw("Vertical") > 0f)
+        if (Input.GetKey(KeyCode.W))
         {
             Vector3 temp = transform.position;
             temp.y += speed * Time.deltaTime;
@@ -78,7 +73,7 @@ public class PlayerController : MonoBehaviour
             transform.position = temp;
 
         }
-        else if (Input.GetAxisRaw("Vertical") < 0f)
+        else if (Input.GetKey(KeyCode.S))
         {
             Vector3 temp = transform.position;
             temp.y -= speed * Time.deltaTime;
@@ -90,7 +85,7 @@ public class PlayerController : MonoBehaviour
             transform.position = temp;
 
         }
-        if (Input.GetAxisRaw("Horizontal") > 0f)
+        if (Input.GetKey(KeyCode.D))
         {
             Vector3 temp = transform.position;
             temp.x += speed * Time.deltaTime;
@@ -102,7 +97,7 @@ public class PlayerController : MonoBehaviour
             }
             transform.position = temp;
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0f)
+        else if (Input.GetKey(KeyCode.A))
         {
             Vector3 temp = transform.position;
             temp.x -= speed * Time.deltaTime;
@@ -112,7 +107,6 @@ public class PlayerController : MonoBehaviour
                 temp.x = min_X;
             }
             transform.position = temp;
-
         }
     }
     void Attack()
@@ -130,7 +124,6 @@ public class PlayerController : MonoBehaviour
                 canAttack = false;
                 attack_Timer = 0;
                 Instantiate(player_Bullet, attack_Point.position, Quaternion.identity);
-
             }
         }
         if (Input.GetKeyDown(KeyCode.J))
@@ -175,8 +168,6 @@ public class PlayerController : MonoBehaviour
                 direction = 0;
                 dashTime = startDashTime;
                 //rb.velocity = Vector2.zero;
-                
-
             }
             else
             {
@@ -191,7 +182,6 @@ public class PlayerController : MonoBehaviour
                         transform.position = impulse;
                        
                         Debug.Log("ARRIBA HOSTIA");
-
                     }
                     if (direction == 2)
                     {
@@ -199,7 +189,7 @@ public class PlayerController : MonoBehaviour
                         impulse.y -= dashSpeed * Time.deltaTime;
                         transform.position = impulse;
                     }
-                   if (direction == 3)
+                    if (direction == 3)
                     {
                         Vector3 impulse = transform.position;
                         impulse.x += dashSpeed * Time.deltaTime;
@@ -212,21 +202,12 @@ public class PlayerController : MonoBehaviour
                         impulse.x -= dashSpeed * Time.deltaTime;
                         transform.position = impulse;
                     }
-                }
-                
-
-               
-                
-
-
-                
+                }   
             }
         }
-
     }
     void applyPowerUp()
     {
-
         if (Input.GetKeyDown(KeyCode.L))
         {
             if (playerstats.powerUps == 1)//speed up donete
@@ -237,7 +218,6 @@ public class PlayerController : MonoBehaviour
                     //Insertar sonido de speedup
                     //Insertar fx de speedUp
                     speed = speed + 2f;
-
                 }
             }
             if (playerstats.powerUps == 2)
@@ -247,7 +227,6 @@ public class PlayerController : MonoBehaviour
             //igual pal doble
             // igual pal laser. el laser es que te apaga el ataque normal y el doble ataque y tienes un laser si lo mejoras tienes laser doble
             //El puto radial hay que mirarlo bien
-
         }
     }
 }

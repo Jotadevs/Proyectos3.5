@@ -89,7 +89,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5052208731854110732}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -109,3 +109,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 14
   deactivate_Timer: 3
+  explosion: {fileID: 434938, guid: 0a96672b0252c634bb04d1f59f57fb5d, type: 3}

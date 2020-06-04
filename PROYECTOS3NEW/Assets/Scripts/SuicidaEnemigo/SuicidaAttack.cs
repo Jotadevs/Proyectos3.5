@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class SuicidaAttack : MonoBehaviour
 {
-    public Transform player;
-    public SuicidaDetection SD;
+    private Transform player;
+    private SuicidaDetection SD;
     public float speed;
-    public patrol patroll;
+    private patrol patroll;
 
     // Start is called before the first frame update
     void Start()
     {
+        SD = gameObject.GetComponent<SuicidaDetection>();
+        player = GameObject.Find("Player").GetComponent<Transform>();
         patroll = GetComponent<patrol>();
     }
 

@@ -16,7 +16,10 @@ public class patrol : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+        if(other.gameObject.tag == "" || other.gameObject.tag == "")
+        {
 
+        }
     }
 
     // Update is called once per frame

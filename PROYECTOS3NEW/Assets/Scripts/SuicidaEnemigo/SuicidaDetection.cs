@@ -5,11 +5,14 @@ using UnityEngine;
 public class SuicidaDetection : MonoBehaviour
 {
     public float range;
-    public Transform player;
+    private Transform player;
     public bool shooting;
     public bool detected;
 
-
+    private void Start()
+    {
+        player = GameObject.Find("Player").GetComponent<Transform>();
+    }
     // Update is called once per frame
     void Update()
     {

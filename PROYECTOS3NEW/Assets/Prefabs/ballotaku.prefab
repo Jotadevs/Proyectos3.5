@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e3f0fec71d6fb1746b9e8cbc3082fa9a, type: 2}
+  - {fileID: 2100000, guid: 01f6815078a816948995d680b453f654, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,11 +89,14 @@ GameObject:
   m_Component:
   - component: {fileID: 5825852541504734379}
   - component: {fileID: 3238892699676401025}
+  - component: {fileID: 6168167751286884468}
   - component: {fileID: 960056593121568653}
   - component: {fileID: 4565941630784701575}
+  - component: {fileID: 1613011954343280254}
+  - component: {fileID: 6897432433077732508}
   m_Layer: 0
   m_Name: ballotaku
-  m_TagString: Untagged
+  m_TagString: Enemy2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,9 +129,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  player: {fileID: 0}
   shooting: 0
   detected: 0
+--- !u!114 &6168167751286884468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386694891191187128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c945aced51f9148857e9b57e2ecc53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!114 &960056593121568653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,10 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e0d4096d346214cb620bc24dda244e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  SD: {fileID: 3238892699676401025}
-  speed: 10
-  patroll: {fileID: 0}
+  speed: 8
 --- !u!114 &4565941630784701575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,8 +169,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3464ec542a9cf4d9784be454925a77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 5
   movePositions:
   - {fileID: 0}
-  - {fileID: 0}
   startWaitTime: 0
+--- !u!54 &1613011954343280254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386694891191187128}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &6897432433077732508
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386694891191187128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
