@@ -79,6 +79,7 @@
     <Compile Include="Assets\PatrolSuicida.cs" />
     <Compile Include="Assets\SceneController.cs" />
     <Compile Include="Assets\SceneControllerFinder.cs" />
+    <Compile Include="Assets\Scripts\BossStateMachine.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaDetection.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaLookAtPlayer.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Scripts\SuicidaEnemigo\SuicidaDetection.cs" />
     <Compile Include="Assets\Scripts\Vidas.cs" />
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
+    <Compile Include="Assets\StopStage.cs" />
     <Compile Include="Assets\TurretDetection.cs" />
     <Compile Include="Assets\TurretLookAtPlayer.cs" />
     <Compile Include="Assets\TurretMoving.cs" />

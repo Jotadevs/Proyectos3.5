@@ -22132,10 +22132,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  min_Y: -20
-  max_Y: 20
-  min_X: -20
-  max_X: 20
+  min_Y: -15
+  max_Y: 15
+  min_X: -27
+  max_X: 25
   player_Bullet: {fileID: 5052208731854110732, guid: a4d0affd256a1fa44878752cbd3d842b,
     type: 3}
   attack_Point: {fileID: 1690326688}
@@ -44449,22 +44449,22 @@ PrefabInstance:
     - target: {fileID: 1641538086253159227, guid: fac04002f1f041d43bdcb9eb69c2a5ae,
         type: 3}
       propertyPath: min_Y
-      value: -20
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 1641538086253159227, guid: fac04002f1f041d43bdcb9eb69c2a5ae,
         type: 3}
       propertyPath: max_Y
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1641538086253159227, guid: fac04002f1f041d43bdcb9eb69c2a5ae,
         type: 3}
       propertyPath: min_X
-      value: -20
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 1641538086253159227, guid: fac04002f1f041d43bdcb9eb69c2a5ae,
         type: 3}
       propertyPath: max_X
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3885002878948459936, guid: fac04002f1f041d43bdcb9eb69c2a5ae,
         type: 3}
