@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public GameObject player_Bullet;
     [SerializeField]
     public Transform attack_Point;
-    public PlayerStats playerstats;
     public float attack_Timer = 0.35f;
     private float current_attack_Timer;
 
@@ -30,15 +29,17 @@ public class PlayerController : MonoBehaviour
     private bool canLaser;
     private bool canDash;
 
-
+    public PowerUp pUp;
+    public MissileAttack missile;
 
     void Awake()
     {
-        playerstats = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody>();
     }
     void Start()
     {
+        missile = GameObject.FindObjectOfType<MissileAttack>();
+        pUp = GetComponentInChildren<PowerUp>();
         current_attack_Timer = attack_Timer;
         dashTime = startDashTime;
     }
@@ -48,12 +49,8 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         Attack();
         applyPowerUp();
-        
-      //  Debug.Log(speed);
-       // Debug.Log(playerstats.powerUps);
-      //  Debug.Log(direction);
-
     }
+
     void FixedUpdate()
     {
         Dashing();
@@ -128,12 +125,9 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            if (misileShoot)
+            if (canMisile)
             {
-                //misileshoot false
-                //misile_timer=0;
-                //Instantiate(player_misile, misile_point.position, quaternion.identity);
-                //Hay que hacer un script para el misil como con la bala
+                missile.MissileShoot();
             }
         }
     }
@@ -210,17 +204,17 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if (playerstats.powerUps == 1)//speed up donete
+            if (pUp.powerUps == 1)//speed up donete
             {
-                playerstats.powerUps = 0;
-                if (speed < 12f)
+                pUp.powerUps = 0;
+                if (speed < 30f)
                 {
                     //Insertar sonido de speedup
                     //Insertar fx de speedUp
                     speed = speed + 2f;
                 }
             }
-            if (playerstats.powerUps == 2)
+            if (pUp.powerUps == 2)
             {
                 canMisile = true;
             }

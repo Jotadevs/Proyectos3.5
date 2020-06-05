@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-
+    public int powerUps = 0;
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.tag == "PowerUp")
         {
-            PickUp();
+            powerUps++;
+            Destroy(other.gameObject);
         }
     }
-   void PickUp()
-    {
-        Destroy(gameObject);
-    }
-    
 }

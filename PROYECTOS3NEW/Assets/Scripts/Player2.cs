@@ -11,7 +11,7 @@ public class Player2 : MonoBehaviour
     public GameObject player_Bullet;
     [SerializeField]
     public Transform attack_Point;
-    public PlayerStats playerstats;
+
     public float attack_Timer = 0.35f;
     private float current_attack_Timer;
 
@@ -30,11 +30,11 @@ public class Player2 : MonoBehaviour
     private bool canLaser;
     private bool canDash;
 
-
+    public PowerUp pUp;
 
     void Awake()
     {
-        playerstats = GetComponent<PlayerStats>();
+        
         rb = GetComponent<Rigidbody>();
     }
     void Start()
@@ -210,9 +210,9 @@ public class Player2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            if (playerstats.powerUps == 1)//speed up donete
+            if (pUp.powerUps == 1)//speed up donete
             {
-                playerstats.powerUps = 0;
+                pUp.powerUps = 0;
                 if (speed < 12f)
                 {
                     //Insertar sonido de speedup
@@ -220,7 +220,7 @@ public class Player2 : MonoBehaviour
                     speed = speed + 2f;
                 }
             }
-            if (playerstats.powerUps == 2)
+            if (pUp.powerUps == 2)
             {
                 canMisile = true;
             }
