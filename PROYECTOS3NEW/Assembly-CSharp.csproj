@@ -80,7 +80,9 @@
     <Compile Include="Assets\PatrolSuicida.cs" />
     <Compile Include="Assets\SceneController.cs" />
     <Compile Include="Assets\SceneControllerFinder.cs" />
-    <Compile Include="Assets\Scripts\BossStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossDetection.cs" />
+    <Compile Include="Assets\Scripts\Boss\BossStateMachine.cs" />
+    <Compile Include="Assets\Scripts\Boss\Stage1.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\BulletScripts\MissileScript.cs" />
     <Compile Include="Assets\Scripts\CazaEnemigo\CazaDetection.cs" />

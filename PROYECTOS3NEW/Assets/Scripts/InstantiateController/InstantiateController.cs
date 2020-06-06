@@ -14,14 +14,14 @@ public class InstantiateController : MonoBehaviour
     {
 
         objectsToInstantiate.Add(enemy);
-        objectsInitialTransform.Add(enemy.transform.position);
+        objectsInitialTransform.Add(enemy.transform.localPosition);
     }
 
     public void InstanceMyObjects()
     {
         for(int i = 0; i < objectsToInstantiate.Count; i++)
         {
-            objectsToInstantiate[i].transform.position = objectsInitialTransform[i];
+            objectsToInstantiate[i].transform.localPosition = objectsInitialTransform[i];
             objectsToInstantiate[i].SetActive(true);
         }
     }

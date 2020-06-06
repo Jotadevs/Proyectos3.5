@@ -247,7 +247,6 @@ GameObject:
   - component: {fileID: 3555099839024819973}
   - component: {fileID: 7790993461792326615}
   - component: {fileID: 8242050547486617810}
-  - component: {fileID: 2739775367663893102}
   m_Layer: 0
   m_Name: caza
   m_TagString: Enemy3
@@ -351,6 +350,7 @@ MonoBehaviour:
   detected1: 0
   shooting2: 0
   detected2: 0
+  sceneController: {fileID: 0}
 --- !u!114 &3555099839024819973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,24 +398,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &2739775367663893102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8075734856836275100}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0765b28107c0247b8f29f995cb8fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: -5693740906904465328, guid: 40ad93bad340a8c4b818abd79c74b404, type: 3}
-  CD: {fileID: 5649266680646202675}
-  PAD: {fileID: 5457224973096663182}
-  fireRate: 1
-  timeCounter: 0
-  bulletSpeed: 7
 --- !u!1 &8075764990024905352
 GameObject:
   m_ObjectHideFlags: 0
