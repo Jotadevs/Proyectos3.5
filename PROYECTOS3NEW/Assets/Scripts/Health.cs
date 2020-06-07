@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public Vidas vidaCanvas;
     public BossDetection BD;
+    public BoxCollider BC;
     public CazaDetection[] CD;
     public SuicidaDetection[] SD;
     public TurretDetection[] TD;
@@ -27,6 +28,7 @@ public class Health : MonoBehaviour
     public Transform explosion;
     void Start()
     {
+        
         SA = GameObject.FindObjectsOfType<SuicidaAttack>();
         CS = GameObject.FindObjectsOfType<CazaShooting>();
         TS = GameObject.FindObjectsOfType<TurretShooting>();
@@ -51,6 +53,7 @@ public class Health : MonoBehaviour
         if(collision.gameObject.tag == "Bullet")
         {
             BD.enabled = false;
+            BC.enabled = false;
             for (int i = 0; i < CD.Length; i++)
             {
                 CD[i].enabled = false;
@@ -130,6 +133,7 @@ public class Health : MonoBehaviour
         controller.InstanceMyObjects();
         mesh.enabled = true;
         BD.enabled = true;
+        BC.enabled = true;
         for (int i = 0; i < CD.Length; i++)
         {
             CD[i].enabled = true; 

@@ -42,7 +42,7 @@ public class PatrolSuicida : MonoBehaviour
     {
         if(other.gameObject.tag == "StartPatrol")
         {
-            speed = 5;
+            speed = 7;
         }
     }
 

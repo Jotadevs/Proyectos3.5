@@ -18,6 +18,7 @@ public class DestroyOnHit : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
+        if(collision.gameObject.tag == "Player" || collision.gameObject.tag == "Stage")
         Destroy(this.gameObject);
         
     }

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9213131239145069617}
-  - component: {fileID: 2428438485465274308}
   - component: {fileID: 433285198424946738}
   - component: {fileID: 7329272570006854333}
   m_Layer: 0
@@ -33,24 +32,6 @@ Transform:
   m_Father: {fileID: 7120881673300144419}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2428438485465274308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2267733302341135417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d0765b28107c0247b8f29f995cb8fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: -5693740906904465328, guid: 40ad93bad340a8c4b818abd79c74b404, type: 3}
-  CD: {fileID: 5649266680646202675}
-  PAD: {fileID: 5457224973096663182}
-  fireRate: 1
-  timeCounter: 0
-  bulletSpeed: 8
 --- !u!114 &433285198424946738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +64,7 @@ MonoBehaviour:
   PAD: {fileID: 5457224973096663182}
   fireRate: 1
   timeCounter: 0
-  bulletSpeed: 7
+  bulletSpeed: 15
 --- !u!1 &6005976664706319179
 GameObject:
   m_ObjectHideFlags: 0
