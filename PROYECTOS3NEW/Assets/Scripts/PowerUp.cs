@@ -11,6 +11,7 @@ public class PowerUp : MonoBehaviour
         {
             powerUps++;
             Destroy(other.gameObject);
+            Debug.Log(powerUps);
         }
     }
 }

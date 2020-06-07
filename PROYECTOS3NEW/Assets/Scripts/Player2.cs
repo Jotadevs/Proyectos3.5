@@ -9,12 +9,15 @@ public class Player2 : MonoBehaviour
     public float min_Y, max_Y, min_X, max_X;
     [SerializeField]
     public GameObject player_Bullet;
+    public GameObject laser_Bullet;
     [SerializeField]
     public Transform attack_Point;
-
+    public Transform laser_Point;
+    public Transform attack2_Point;
+    public Transform attack3_Point;
     public float attack_Timer = 0.35f;
     private float current_attack_Timer;
-
+    bool misileOn;
     //Cosas del Dash
     private Rigidbody rb;
     public float dashSpeed;//velocidad del esquivo del dash
@@ -30,6 +33,7 @@ public class Player2 : MonoBehaviour
     private bool canLaser;
     private bool canDash;
 
+    public MissileAttack missile;
     public PowerUp pUp;
 
     void Awake()
@@ -117,23 +121,36 @@ public class Player2 : MonoBehaviour
             canAttack = true;
 
         }
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            if (canAttack)//SimpleAttack
+            canAttack = false;
+            attack_Timer = 0;
+            if (canDoubleShoot)
             {
-                canAttack = false;
-                attack_Timer = 0;
-                Instantiate(player_Bullet, attack_Point.position, Quaternion.identity);
+                Instantiate(player_Bullet, attack2_Point.position, Quaternion.identity);
+                Instantiate(player_Bullet, attack3_Point.position, Quaternion.identity);
+            }
+            else
+            {
+                if (canLaser)
+                {
+                    Instantiate(laser_Bullet, laser_Point.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(player_Bullet, attack_Point.position, Quaternion.identity);
+                }
             }
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             if (misileShoot)
             {
-                //misileshoot false
-                //misile_timer=0;
-                //Instantiate(player_misile, misile_point.position, quaternion.identity);
-                //Hay que hacer un script para el misil como con la bala
+             
+                if (misileOn)
+                {
+                    missile.MissileShoot();
+                }
             }
         }
     }
@@ -173,7 +190,7 @@ public class Player2 : MonoBehaviour
             {
                 dashTime -= Time.deltaTime;
 
-                if (Input.GetKeyDown(KeyCode.R))
+                if (Input.GetKeyDown(KeyCode.I))
                 {
                     if (direction == 1)
                     {
@@ -208,12 +225,12 @@ public class Player2 : MonoBehaviour
     }
     void applyPowerUp()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             if (pUp.powerUps == 1)//speed up donete
             {
                 pUp.powerUps = 0;
-                if (speed < 12f)
+                if (speed < 30f)
                 {
                     //Insertar sonido de speedup
                     //Insertar fx de speedUp
@@ -222,7 +239,20 @@ public class Player2 : MonoBehaviour
             }
             if (pUp.powerUps == 2)
             {
-                canMisile = true;
+                misileOn = true;
+                pUp.powerUps = 0;
+            }
+            if (pUp.powerUps == 3)
+            {
+                canDoubleShoot = true;
+                pUp.powerUps = 0;
+                canLaser = false;
+            }
+            if (pUp.powerUps == 4)
+            {
+                canLaser = true;
+                pUp.powerUps = 0;
+                canDoubleShoot = false;
             }
             //igual pal doble
             // igual pal laser. el laser es que te apaga el ataque normal y el doble ataque y tienes un laser si lo mejoras tienes laser doble
