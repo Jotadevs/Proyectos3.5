@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":120.17127990722656,"y":8.21651840209961,"z":-345.36279296875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":164.1785888671875,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-8.651906967163086,"y":13.690882682800293,"z":-17.559661865234376},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":38.82353591918945,"orthographic":true}
+>>>>>>> Movimiento
