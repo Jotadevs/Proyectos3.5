@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyOnHit : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,9 @@ public class DestroyOnHit : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         Destroy(this.gameObject);
+        
     }
 }

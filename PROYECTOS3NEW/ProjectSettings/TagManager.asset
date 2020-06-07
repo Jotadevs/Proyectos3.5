@@ -12,6 +12,9 @@ TagManager:
   - StartPatrol
   - Detenedor
   - Stage
+  - PlayerBullet
+  - BossShootpoint
+  - BossShootpointCentro
   layers:
   - Default
   - TransparentFX

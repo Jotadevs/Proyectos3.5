@@ -5,23 +5,35 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    private TextMeshProUGUI scoreText = null;
-    private int score = 0;
+    public TMP_Text scoreText;
+    public int score = 0;
+    public BDDController BDD;
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     // Start is called before the first frame update
     void Start()
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
+        BDD = GameObject.FindObjectOfType<BDDController>();
     }
 
-    // Update is called once per frame
+    
+    public void UpdateDatabase(int vida, string player)
+    {
+        BDD.ConnectDataBase(score, vida, player);
+    }
+
+
     void Update()
     {
-        scoreText.text = "" + score;
+        scoreText.text = score.ToString();
     }
     public void AddScore(int newValue)
     {
         score += newValue;
     }
+    
 
 
     
