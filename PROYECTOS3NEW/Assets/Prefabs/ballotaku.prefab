@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7647275533101878040}
   - component: {fileID: 1613011954343280254}
   - component: {fileID: 6897432433077732508}
+  - component: {fileID: 2076009090}
   m_Layer: 0
   m_Name: ballotaku
   m_TagString: Enemy2
@@ -129,8 +130,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 20
-  shooting: 0
-  detected: 0
+  shooting1: 0
+  detected1: 0
+  shooting2: 0
+  detected2: 0
+  sceneController: {fileID: 0}
 --- !u!114 &6168167751286884468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e0d4096d346214cb620bc24dda244e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 9
+  sceneController: {fileID: 0}
 --- !u!114 &7647275533101878040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,6 +177,7 @@ MonoBehaviour:
   speed: 0
   movePositions:
   - {fileID: 0}
+  lista: {fileID: 0}
   startWaitTime: 0
 --- !u!54 &1613011954343280254
 Rigidbody:
@@ -202,3 +208,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2076009090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386694891191187128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9deeb1bdf2b03340be350cab23db30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otakus: []
+  cazas: []

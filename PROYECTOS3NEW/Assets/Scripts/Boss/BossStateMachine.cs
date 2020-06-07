@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class BossStateMachine : MonoBehaviour
 {
     public BossHealth bHealth;
     public Stage1 stage1;
     public Stage2 stage2;
     public Stage3 stage3;
+
 
 
     // Start is called before the first frame update
@@ -58,7 +59,7 @@ public class BossStateMachine : MonoBehaviour
                 GetComponent<Stage1>().enabled = false;
                 GetComponent<Stage2>().enabled = false;
                 GetComponent<Stage3>().enabled = false;
-                //Cargar escena You Win Bitch
+                SceneManager.LoadScene("YouWin");
             }
         }
         catch
